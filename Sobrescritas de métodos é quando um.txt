@@ -1,0 +1,40 @@
+Sobrescritas de métodos é quando uma classe filha redefine o método, o comportamento da classe pai, proporcionando uma implementação especifica para esse método na classe filha.
+
+A classe filha deve ter o mesmo nome, o mesmo tipo e os mesmos parâmetros.
+
+só conseguimos sobrescrever desde que o método não seja (final), (static), (private).
+
+//MODIFICADORES
+ 
+static: utilizado para declarar variáveis e métodos que pertencem a uma classe, quando criamos um static em uma classe, conseguimos acessar ele diretamente sem precisar instanciar uma classe, por exemplo:
+não precisamos fazer isso:
+ContaBancaria conta = ContaBancaria(1000); //Isso supondo que exista uma classe ContaBancária
+
+podemos fazer diretamente assim: 
+ContaBancaria.aplicaJuros(450); //estamos chamando o método sem instanciar a classe, (Instanciar uma classe é criar um objeto a partir daquela classe).
+
+
+tipo, uma classe normal, eu preciso de um objeto para usa-la, para modificar, e etc. Mas com static, é da própria classe, tipo:
+
+class Exemplo{
+static int somar(int a,int b){
+    return a + b;
+ }
+}
+
+void main(){
+   print(Exemplo.somar(2, 5));
+}
+
+no mini programa acima, eu não precisei criar um objeto (uma variavel) para usar o método.
+
+
+
+//CLASSES ABSTRATAS
+
+Classes abstratas são classes que não podem ser instanciadas, ou seja, ela serve somente como molde para outras classes, sem a criação de um objeto
+
+nas classes abstratas podemos ter os métodos abstratos e os concretos, os abstratos são sem nenhuma funcionalidade, ex: void dormir(); //não é necessário colocar {} | e é necessário obrigatoriamente a função que chamar a classe abstrata usar o método abstrato
+
+
+Já os concretos são métodos normais, que tenham uma implementação.
