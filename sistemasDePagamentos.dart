@@ -1,3 +1,4 @@
+//AQUI O OBJETIVO É APRENDER CLASSES ABSTRATAS
 void main(){
   Pagamento credito = CartaoDeCredito();
   Pagamento boleto = Boleto();

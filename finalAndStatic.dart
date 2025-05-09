@@ -1,3 +1,4 @@
+//AQUI O OBJETIVO É APRENDER SOBRE (STATIC | FINAL)
 void main(){
   print('O resultado da soma é: ${Calculardora.somar(4, 3)}');
   print('O resultado da multiplicação é: ${Calculardora.multiplicacao(4, 3)}');
