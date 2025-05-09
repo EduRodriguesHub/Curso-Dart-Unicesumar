@@ -1,0 +1,54 @@
+Bibioteca Triangular:
+
+
+void main(){
+  String  nomeBiblioteca = 'Biblioteca Tringular';
+  double valorMensalidade = 20.00;
+  bool livroDisponivel = true;
+  double impostoPorLivro = 0.25;
+  
+  //a função adicionar livros (com a lista antes)
+  List<Map<String, dynamic>> listaDeLivros = [];
+  Map<String, int> paginasLivro = {};
+  
+    void adicionarLivros({String titulo = 'Não informado', String autor = 'Não informado', int anoPublicacao = 0, int paginas = 0}){
+  listaDeLivros.add({
+    'titulo': titulo,
+    'autor': autor,
+    'ano': anoPublicacao
+    });
+    
+    //aqui eu estou colocando no mapa de páginas, o titulo e as páginas  
+    paginasLivro[titulo] = paginas;
+    }
+  
+  
+  //livros de exemplo
+  adicionarLivros(titulo: 'Dom Quixote', autor: 'Miguel de Cervantes', anoPublicacao: 1605, paginas: 863);
+  adicionarLivros(titulo: 'A Divina Comédia', autor: 'Dante Alighieri', anoPublicacao: 1320, paginas: 798);
+  
+  
+  //total de livros
+  int totalLivrosCadastrados = listaDeLivros.length;
+  
+  //função anomima
+  var calcularTotal = (){
+    double imposto = totalLivrosCadastrados * impostoPorLivro;
+    double total = valorMensalidade + imposto;
+    
+    return total;
+  };
+  
+  //Mostrando no console
+  print(nomeBiblioteca);
+  print(livroDisponivel);
+  listaDeLivros.forEach((livro){
+    print('_____________________');
+    livro.forEach((titulo, nome){
+      print('$titulo : $nome');
+    });
+  });
+  
+  print("O valor final fica em R\$ ${calcularTotal()}");
+  
+}
